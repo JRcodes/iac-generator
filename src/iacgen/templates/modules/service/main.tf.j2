@@ -10,8 +10,8 @@ locals {
   service_name = "{{ service.name }}"
 
   labels = {
-    app.kubernetes.io/name       = local.service_name
-    app.kubernetes.io/managed-by = "iacgen"
+    "app.kubernetes.io/name"       = local.service_name
+    "app.kubernetes.io/managed-by" = "iacgen"
   }
 }
 
@@ -26,7 +26,7 @@ resource "kubernetes_namespace" "this" {
     name = var.namespace
 
     labels = {
-      app.kubernetes.io/part-of = local.service_name
+      "app.kubernetes.io/part-of" = local.service_name
     }
   }
 }
