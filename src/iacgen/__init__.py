@@ -15,7 +15,7 @@ Example usage:
 
 """
 
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 # Public API exports
 from iacgen.config import (
